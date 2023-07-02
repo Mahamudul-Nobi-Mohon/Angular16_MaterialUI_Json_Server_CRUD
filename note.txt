@@ -1,0 +1,7 @@
+json server install: npm install -g json-server
+
+json server start command: json-server --watch db.json
+
+angular install command: npm install -g @angular/cli
+
+angular project start command: ng serve --open
