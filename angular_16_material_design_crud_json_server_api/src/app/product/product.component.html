@@ -1,0 +1,60 @@
+<mat-card>
+    <mat-card-header>
+        <h2>Product Details</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="productRegisterForm" (ngSubmit)="save()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Id</mat-label>
+              <input matInput formControlName="id" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Product Name</mat-label>
+                <input matInput formControlName="name" >
+              </mat-form-field>
+            
+
+              <div class="mat-table">
+                <div class="mat-header-row">
+                  <div class="mat-header-cell">Color</div>
+                  <div class="mat-header-cell">Unit Price</div>
+                  <div class="mat-header-cell">Action</div>
+                </div>
+                <div class="mat-row">
+                  <div class="mat-cell">
+                    <mat-form-field class="example-form">
+                        <mat-label>Color</mat-label>
+                        <input matInput formControlName="color" >
+                      </mat-form-field>
+                  </div>
+                  <div class="mat-cell">
+                    <mat-form-field class="example-form">
+                        <mat-label>Unit Price</mat-label>
+                        <input matInput formControlName="unitPrice" >
+                      </mat-form-field>
+                  </div>
+                  <div class="mat-cell"><button mat-raised-button color="primary" (ngSubmit)="addProductToList()">Add</button></div>
+                </div>
+              </div>
+
+
+
+
+
+
+            
+            
+            
+
+
+              
+
+            <br/>
+              <div>
+                <button mat-raised-button color="primary">Save</button> 
+              </div>
+          </form>
+    </mat-card-content>
+  </mat-card>
+
+
