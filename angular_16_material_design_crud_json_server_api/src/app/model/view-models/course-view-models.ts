@@ -1,5 +1,5 @@
 export interface CourseViewModels{
-    courseID?:number;
+    id?:number;
     batchName?:string;
     courseName?:string;
     courseDesc?:string;

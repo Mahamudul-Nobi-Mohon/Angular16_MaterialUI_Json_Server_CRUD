@@ -1,5 +1,5 @@
 export interface Trainee {
-    traineeID?:number;
+    id?:number;
     courseID?:number;
     courseName?:string;
     traineeName?:string;

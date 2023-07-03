@@ -53,7 +53,7 @@ export class TraineeCreateComponent implements OnInit {
         
         reader.onload = function (e: any) {
           console.log(e);
-          _self.traineeService.uploadImage(<number>r.traineeID, file)
+          _self.traineeService.uploadImage(<number>r.id, file)
             .subscribe({
               next: r => {
                 _self.notifyService.message('Picture uploaded', 'DISMISS');

@@ -40,7 +40,7 @@ export class CourseViewComponent implements OnInit {
         .subscribe({
           next: r=>{
             this.notifyService.message('Customer removed', 'DISMISS');
-            this.dataSource.data = this.dataSource.data.filter(c => c.courseID != data.courseID);
+            this.dataSource.data = this.dataSource.data.filter(c => c.id != data.id);
           },
           error:err=>{
             this.notifyService.message('Failed to delete data', 'DISMISS');
@@ -54,7 +54,7 @@ export class CourseViewComponent implements OnInit {
     this.courseService.getVM().subscribe({
       next: r=>{
         this.course = r;
-        //console.log(this.course);
+        console.log(this.course);
         this.dataSource.data = this.course;
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;

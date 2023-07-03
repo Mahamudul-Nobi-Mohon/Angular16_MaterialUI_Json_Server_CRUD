@@ -1,5 +1,5 @@
 export interface ExamViewModels{
-    examID?:number;
+    id?:number;
     examName?:string;
     examFee?:Number;
     CanDelete?:boolean;

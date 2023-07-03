@@ -42,7 +42,7 @@ export class TraineeViewComponent implements OnInit {
         .subscribe({
           next: r=>{
             this.notifyService.message('Trainee removed', 'DISMISS');
-            this.dataSource.data = this.dataSource.data.filter(c => c.traineeID != data.traineeID);
+            this.dataSource.data = this.dataSource.data.filter(c => c.id != data.id);
           },
           error:(err: any)=>{
             this.notifyService.message('Failed to delete data', 'DISMISS');

@@ -29,7 +29,7 @@
                         <mat-form-field class="f-w" appearance="fill">
                             <mat-label>Trainee</mat-label>
                             <mat-select formControlName="traineeID">
-                                <mat-option *ngFor="let p of trainee" [value]="p.traineeID">{{p.traineeName}}</mat-option>
+                                <mat-option *ngFor="let p of trainee" [value]="p.id">{{p.traineeName}}</mat-option>
                             </mat-select>
                         
                         </mat-form-field>

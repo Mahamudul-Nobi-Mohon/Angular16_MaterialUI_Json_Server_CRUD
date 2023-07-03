@@ -46,9 +46,10 @@ save(){
     let id:number=this.activatedRoute.snapshot.params['id'];
     this.courseService.getById(id)
     .subscribe({
-      next: r=> {
+      next: r=> { 
         this.course=r;
-        //console.log(this.course);
+       // this.courseForm.batchName = r.couce
+        console.log(r); 
         this.courseForm.patchValue(this.course);
       },
       error: err=>{

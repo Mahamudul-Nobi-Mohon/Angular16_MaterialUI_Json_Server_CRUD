@@ -18,7 +18,7 @@ export class CourseService {
     return this.http.get<Course[]>(`${apiUrl}/Courses`);
   } 
   getVM():Observable<CourseViewModels[]>{
-    return this.http.get<CourseViewModels[]>(`${apiUrl}/Courses/VM`);
+    return this.http.get<CourseViewModels[]>(`${apiUrl}/Courses`);
   } 
   getById(id:number):Observable<Course>{
     return this.http.get<Course>(`${apiUrl}/Courses/${id}`);
@@ -28,10 +28,10 @@ export class CourseService {
     return this.http.post<Course>(`${apiUrl}/Courses`, data);
   } 
   update(data:Course):Observable<any>{
-    return this.http.put<any>(`${apiUrl}/Courses/${data.courseID}`, data);
+    return this.http.put<any>(`${apiUrl}/Courses/${data.id}`, data);
   } 
   delete(data:Course):Observable<any>{
-    return this.http.delete<any>(`${apiUrl}/Courses/${data.courseID}`);
+    return this.http.delete<any>(`${apiUrl}/Courses/${data.id}`);
   }
 
 }

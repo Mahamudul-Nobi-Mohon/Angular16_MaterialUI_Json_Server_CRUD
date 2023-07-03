@@ -13,10 +13,10 @@ import {TraineeInputModels} from 'src/app/model/view-models/Input/trainee-input-
 })
 export class TraineeService {
   update(data:TraineeInputModels):Observable<any>{
-    return this.http.put<any>(`${apiUrl}/Trainees/${data.traineeID}/VM`, data);
+    return this.http.put<any>(`${apiUrl}/Trainees/${data.id}`, data);
   }
   delete(data: TraineeViewModels) {
-    return this.http.delete<any>(`${apiUrl}/Trainees/${data.traineeID}`);
+    return this.http.delete<any>(`${apiUrl}/Trainees/${data.id}`);
   }
   constructor(
     private http:HttpClient
@@ -25,13 +25,13 @@ export class TraineeService {
     return this.http.get<Trainee[]>(`${apiUrl}/Trainees`);
   }
   getVM():Observable<TraineeViewModels[]>{
-    return this.http.get<TraineeViewModels[]>(`${apiUrl}/Trainees/VM`);
+    return this.http.get<TraineeViewModels[]>(`${apiUrl}/Trainees`);
   }
   getById(id:number):Observable<Trainee>{
     return this.http.get<Trainee>(`${apiUrl}/Trainees/${id}`);
   } 
   insert(data:TraineeInputModels):Observable<Trainee>{
-    return this.http.post<Trainee>(`${apiUrl}/Trainees/VM`, data);
+    return this.http.post<Trainee>(`${apiUrl}/Trainees`, data);
   } 
   uploadImage(id: number, f: File): Observable<ImagePathResponse> {
     const formData = new FormData();

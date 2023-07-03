@@ -53,7 +53,7 @@ export class TraineeEditComponent implements OnInit {
       let _self = this;
        Object.assign(this.trainee, this.traineeForm.value);
        console.log(this.trainee);
-       let data:TraineeInputModels = {traineeID:this.trainee.traineeID, traineeName: this.trainee.traineeName,traineeAddress: this.trainee.traineeAddress, birthDate:this.trainee.birthDate,email:this.trainee.email,  
+       let data:TraineeInputModels = {id:this.trainee.id, traineeName: this.trainee.traineeName,traineeAddress: this.trainee.traineeAddress, birthDate:this.trainee.birthDate,email:this.trainee.email,  
         courseID:this.trainee.courseID};
        this.traineeService.update(data)
        .subscribe({
@@ -70,7 +70,7 @@ export class TraineeEditComponent implements OnInit {
       var reader = new FileReader();
           
           reader.onload = function (e: any) {
-           _self.traineeService.uploadImage(<number>_self.trainee.traineeID, _self.file)
+           _self.traineeService.uploadImage(<number>_self.trainee.id, _self.file)
            .subscribe({
             next:r=>{
               _self.notifyService.message("Picture updated", "DISMISS");

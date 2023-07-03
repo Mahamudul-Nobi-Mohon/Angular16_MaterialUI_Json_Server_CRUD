@@ -12,7 +12,7 @@ import { ExamViewModels } from 'src/app/model/view-models/exam-view-models';
 })
 export class ExamService {
   getWithItems(id: number) {
-    return this.http.get<ExamAndExamResultViewModel>(`${apiUrl}/Exams/${id}/OI`)
+    return this.http.get<ExamAndExamResultViewModel>(`${apiUrl}/Exams/${id}`)
   }
 
   constructor(
@@ -22,7 +22,7 @@ export class ExamService {
     return this.http.get<Exam[]>(`${apiUrl}/Exams`);
   } 
   getVM():Observable<ExamViewModels[]>{
-    return this.http.get<ExamViewModels[]>(`${apiUrl}/Exams/VM`);
+    return this.http.get<ExamViewModels[]>(`${apiUrl}/Exams`);
   } 
   getById(id:number):Observable<Exam>{
     return this.http.get<Exam>(`${apiUrl}/Exams/${id}`);
@@ -32,10 +32,10 @@ export class ExamService {
     return this.http.post<Exam>(`${apiUrl}/Exams`, data);
   } 
   update(data:Exam):Observable<any>{
-    return this.http.put<any>(`${apiUrl}/ExamsContext/VM/${data.examID}`, data);
+    return this.http.put<any>(`${apiUrl}/ExamsContext/${data.examID}`, data);
   } 
   delete(data: ExamViewModels) {
-    return this.http.delete<any>(`${apiUrl}/Exams/${data.examID}`);
+    return this.http.delete<any>(`${apiUrl}/Exams/${data.id}`);
   }
 
 }

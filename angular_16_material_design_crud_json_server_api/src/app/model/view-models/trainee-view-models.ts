@@ -1,7 +1,7 @@
 export interface TraineeViewModels {
     courseID?:number;
     courseName?:string;
-    traineeID?:number;
+    id?:number;
     traineeName?:string;
     traineeAddress?:string;
     email?:string;

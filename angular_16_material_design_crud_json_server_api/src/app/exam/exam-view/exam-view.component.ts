@@ -40,7 +40,7 @@ export class ExamViewComponent implements OnInit {
         .subscribe({
           next: r=>{
             this.notifyService.message('Exam removed', 'DISMISS');
-            this.dataSource.data = this.dataSource.data.filter(c => c.examID != data.examID);
+            this.dataSource.data = this.dataSource.data.filter(c => c.examID != data.id);
           },
           error:err=>{
             this.notifyService.message('Failed to delete data', 'DISMISS');

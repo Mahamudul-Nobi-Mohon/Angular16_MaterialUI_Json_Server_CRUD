@@ -169,5 +169,107 @@
         }
       ]
     }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "courseID": 1,
+      "batchName": "CS/ACSL/R-50",
+      "courseName": "CS 02",
+      "courseDesc": "Full IT Related Course",
+      "courseDuration": "1 year",
+      "startDate": "2022-01-08T00:00:00",
+      "endDate": "2026-02-05T18:00:00.000Z",
+      "available": true,
+      "trainees": [],
+      "courseModules": []
+    },
+    {
+      "id": 2,
+      "courseID": 2,
+      "batchName": "DDD/ACSL/R-50",
+      "courseName": "DDD",
+      "courseDesc": "Full IT Related Course",
+      "courseDuration": "5 year",
+      "startDate": "2022-02-05T00:00:00",
+      "endDate": "2023-03-09T00:00:00",
+      "available": true,
+      "trainees": [],
+      "courseModules": []
+    },
+    {
+      "batchName": "cse 3rd",
+      "courseName": "eee",
+      "courseDesc": "ba",
+      "courseDuration": "2 month",
+      "startDate": "2022-12-31T18:00:00.000Z",
+      "endDate": "2023-02-27T18:00:00.000Z",
+      "available": true,
+      "id": 3
+    },
+    {
+      "batchName": "cse 4th",
+      "courseName": "bang",
+      "courseDesc": "test 789",
+      "courseDuration": "3",
+      "startDate": "2022-12-31T18:00:00.000Z",
+      "endDate": "2023-01-04T18:00:00.000Z",
+      "available": true,
+      "id": 4
+    },
+    {
+      "batchName": "uui",
+      "courseName": "tttt",
+      "courseDesc": "te",
+      "courseDuration": "6",
+      "startDate": "2015-12-31T18:00:00.000Z",
+      "endDate": "2016-01-05T18:00:00.000Z",
+      "available": true,
+      "id": 5
+    }
+  ],
+  "Exams": [
+    {
+      "id": "1",
+      "examID": 1,
+      "examName": "Monthly",
+      "examFee": 1200,
+      "examResults": []
+    },
+    {
+      "id": "2",
+      "examID": 2,
+      "examName": "Mid Monthly",
+      "examFee": 650,
+      "examResults": []
+    }
+  ],
+  "trainees": [
+    {
+      "id": "1",
+      "traineeID": 1,
+      "traineeName": " Nur Sakib",
+      "traineeAddress": "Mirpur-10",
+      "email": "nursakib47@gmail.com",
+      "picture": "P1.jpg",
+      "isRunning": true,
+      "birthDate": "1997-01-03T00:00:00",
+      "courseID": 1,
+      "course": null,
+      "examResults": []
+    },
+    {
+      "id": "2",
+      "traineeID": 2,
+      "traineeName": " Maruf Billah",
+      "traineeAddress": "Mirpur-1",
+      "email": "marufbillah78@gmail.com",
+      "picture": "P2.jpg",
+      "isRunning": true,
+      "birthDate": "1996-03-09T00:00:00",
+      "courseID": 2,
+      "course": null,
+      "examResults": []
+    }
   ]
 }
