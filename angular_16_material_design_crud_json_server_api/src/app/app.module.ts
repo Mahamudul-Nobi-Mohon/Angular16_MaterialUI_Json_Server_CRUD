@@ -24,13 +24,26 @@ import { RegisterComponent } from './register/register.component';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { UserComponent } from './user/user.component';
 import { ToastrModule } from 'ngx-toastr';
-
-
+ 
+ import { MatImportModule } from '../app/modules/mat-import/mat-import.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { CourseViewComponent } from './course/course-view/course-view.component';
+import { CourseCreateComponent } from './course/course-create/course-create.component';
+import { CourseEditComponent } from './course/course-edit/course-edit.component';
+import { ExamViewComponent } from './exam/exam-view/exam-view.component';
+import { ExamCreateComponent } from './exam/exam-create/exam-create.component';
+import { ExamEditComponent } from './exam/exam-edit/exam-edit.component';
+import { ExamResultComponent } from './exam/exam-result/exam-result.component';
+import { TraineeViewComponent } from './trainee/trainee-view/trainee-view.component';
+import { TraineeCreateComponent } from './trainee/trainee-create/trainee-create.component';
+import { TraineeEditComponent } from './trainee/trainee-edit/trainee-edit.component';
+import { ConfirmDialogComponent } from './common/confirm-dialog/confirm-dialog.component';
+import { NavBarComponent } from './common/nav-bar/nav-bar.component';
 //import {MaterialModule} from 'src/material.module';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 
 @NgModule({
@@ -47,6 +60,18 @@ import { ProductComponent } from './product/product.component';
     UpdatepopupComponent,
     UserComponent,
     ProductComponent,
+    CourseViewComponent,
+    CourseCreateComponent,
+    CourseEditComponent,
+    ExamViewComponent,
+    ExamCreateComponent,
+    ExamEditComponent,
+    ExamResultComponent,
+    TraineeViewComponent,
+    TraineeCreateComponent,
+    TraineeEditComponent,
+    ConfirmDialogComponent,
+    NavBarComponent,
     
   ],
   imports: [
@@ -58,6 +83,8 @@ import { ProductComponent } from './product/product.component';
     FormsModule,
     HttpClientModule,
     SharedModule,
+    MatImportModule,
+    MaterialFileInputModule,
     RouterModule.forRoot(AppRoutes),
     AppSidebarComponent,    
     ToastrModule.forRoot(),

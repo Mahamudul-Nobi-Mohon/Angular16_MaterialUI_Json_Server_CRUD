@@ -49,7 +49,7 @@
       "email": "mn.mohon@gmail.com",
       "gender": "male",
       "role": "tech",
-      "isactive": true
+      "isactive": false
     },
     {
       "id": "roton",
