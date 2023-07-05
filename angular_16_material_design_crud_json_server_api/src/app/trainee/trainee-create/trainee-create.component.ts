@@ -38,6 +38,14 @@ export class TraineeCreateComponent implements OnInit {
     }
     
   }
+
+  setCourseName(event: any){
+    this.trainee.courseName = event.source.triggerValue;
+    //console.log(event.value);
+    //console.log(event.source.triggerValue);
+    
+  }
+
   save() {
     if (this.traineeForm.invalid) return;
     Object.assign(this.trainee, this.traineeForm.value)
@@ -88,6 +96,7 @@ export class TraineeCreateComponent implements OnInit {
    
   }
 
+  
 }
 
 

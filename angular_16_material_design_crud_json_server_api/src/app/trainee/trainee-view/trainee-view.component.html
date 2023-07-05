@@ -57,7 +57,7 @@
             <ng-container matColumnDef="actions">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>...</mat-header-cell>
                 <mat-cell *matCellDef="let element">
-                    <a [routerLink]="['/trainee-edit', element.traineeID]"><mat-icon>edit</mat-icon></a>
+                    <a [routerLink]="['/trainee-edit', element.id]"><mat-icon>edit</mat-icon></a>
                     <button [disabled]="!element.canDelete" mat-icon-button (click)="confirmDelete(element)"><mat-icon>delete</mat-icon></button>
                 </mat-cell>
 

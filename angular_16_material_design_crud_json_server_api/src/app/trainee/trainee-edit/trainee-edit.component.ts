@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Inject } from '@angular/core';
+
+import { DOCUMENT } from '@angular/common'; 
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { throwError } from 'rxjs';
@@ -15,11 +17,17 @@ import { NotifyService } from 'src/app/service/shared/notify.service';
   templateUrl: './trainee-edit.component.html',
   styleUrls: ['./trainee-edit.component.scss']
 })
-export class TraineeEditComponent implements OnInit {
+export class TraineeEditComponent implements OnInit 
+{
 
   trainee:Trainee= null!;
   imgPath:string= baseUrl;
   course:Course[] = [];
+  courseRec : any;
+  
+
+   
+
   traineeForm:FormGroup= new FormGroup({
     courseID: new FormControl(undefined, Validators.required),
     traineeName: new FormControl(undefined, Validators.required),
@@ -31,7 +39,7 @@ export class TraineeEditComponent implements OnInit {
     });
   
     file: File = null!;
-    constructor(
+    constructor(@Inject(DOCUMENT) document: Document,
       private traineeService: TraineeService,
       private courseService:CourseService,
       private notifyService:NotifyService,
@@ -48,13 +56,38 @@ export class TraineeEditComponent implements OnInit {
       }
       
     }
+
+    setCourseName(event: any){
+      this.trainee.courseName = event.source.triggerValue;
+       console.log(event.value);
+      console.log(event.source.triggerValue);
+      
+    } 
+      
+   getCourseById(id: any){ 
+   // let id:any= this.trainee.courseID; 
+    this.courseService.getById(id)
+    .subscribe({
+      next: r=> { 
+        //this.courseRec=r;
+        this.trainee.courseName = r.courseName;
+        console.log(r.courseName);  
+      },
+      error: err=>{
+        this.notifyService.message('Failed to load customer data', 'DISMISS');
+        throwError(()=>err);
+      }
+    })
+   }
+     
+
     save(){
       if(this.traineeForm.invalid) return;
       let _self = this;
        Object.assign(this.trainee, this.traineeForm.value);
        console.log(this.trainee);
        let data:TraineeInputModels = {id:this.trainee.id, traineeName: this.trainee.traineeName,traineeAddress: this.trainee.traineeAddress, birthDate:this.trainee.birthDate,email:this.trainee.email,  
-        courseID:this.trainee.courseID};
+        courseID:this.trainee.courseID, courseName: this.trainee.courseName};
        this.traineeService.update(data)
        .subscribe({
         next: r=>{
@@ -84,13 +117,15 @@ export class TraineeEditComponent implements OnInit {
           reader.readAsArrayBuffer(_self.file);
     }
   ngOnInit(): void {
+    
     let id:number = this.activatedRoute.snapshot.params['id'];
     this.traineeService.getById(id)
     .subscribe({
       next: r=>{
         this.trainee=r;
         this.traineeForm.patchValue(this.trainee)
-        console.log(this.trainee)
+       // console.log(this.trainee)
+        this.getCourseById(this.trainee.courseID);
       },
       error: err=> {
         this.notifyService.message('Failed to load tourist data', 'DISMISS')
@@ -106,6 +141,8 @@ export class TraineeEditComponent implements OnInit {
       error: err=>{
         this.notifyService.message("Failed to load trainees", 'DISMISS');
       }
-    });
+
+      
+    }); 
   }
 }

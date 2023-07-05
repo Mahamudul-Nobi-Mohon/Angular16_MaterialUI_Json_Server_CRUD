@@ -25,14 +25,14 @@
             <ng-container matColumnDef="details">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>View Details</mat-header-cell>
                 <mat-cell *matCellDef="let element">
-                    <a title="view deails" [routerLink]="['/exam-results', element.examID]"><mat-icon>info</mat-icon></a>
+                    <a title="view deails" [routerLink]="['/exam-results', element.id]"><mat-icon>info</mat-icon></a>
                    
                 </mat-cell>
             </ng-container>
             <ng-container matColumnDef="actions">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>...</mat-header-cell>
                 <mat-cell *matCellDef="let element">
-                    <a [routerLink]="['/exam-edit', element.examID]"><mat-icon>edit</mat-icon></a>
+                    <a [routerLink]="['/exam-edit', element.id]"><mat-icon>edit</mat-icon></a>
                     <button element.canDelete mat-icon-button (click)="confirmDelete(element)"><mat-icon>delete</mat-icon></button>                </mat-cell>
 
             </ng-container>

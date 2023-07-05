@@ -32,7 +32,7 @@ export class ExamService {
     return this.http.post<Exam>(`${apiUrl}/Exams`, data);
   } 
   update(data:Exam):Observable<any>{
-    return this.http.put<any>(`${apiUrl}/ExamsContext/${data.examID}`, data);
+    return this.http.put<any>(`${apiUrl}/Exams/${data.id}`, data);
   } 
   delete(data: ExamViewModels) {
     return this.http.delete<any>(`${apiUrl}/Exams/${data.id}`);

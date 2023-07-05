@@ -64,6 +64,7 @@ export class ExamEditComponent implements OnInit {
     console.log(this.examForm.value);
     Object.assign(this.exam, this.examForm.value);
     console.log(this.exam);
+    debugger;
     this.examService.update(this.exam)
     .subscribe({
       next:r=>{

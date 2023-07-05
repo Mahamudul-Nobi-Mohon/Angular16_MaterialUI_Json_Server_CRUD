@@ -218,7 +218,7 @@
       "id": 4
     },
     {
-      "batchName": "uui",
+      "batchName": "BBA 1st",
       "courseName": "tttt",
       "courseDesc": "te",
       "courseDuration": "6",
@@ -226,27 +226,70 @@
       "endDate": "2016-01-05T18:00:00.000Z",
       "available": true,
       "id": 5
+    },
+    {
+      "batchName": "english 123",
+      "courseName": "english",
+      "courseDesc": "english",
+      "courseDuration": "80",
+      "startDate": "2023-07-03T18:00:00.000Z",
+      "endDate": "2023-07-27T18:00:00.000Z",
+      "available": true,
+      "id": 6
+    },
+    {
+      "batchName": "eee test",
+      "courseName": "eee 123",
+      "courseDesc": "nice",
+      "courseDuration": "50",
+      "startDate": "2023-07-04T18:00:00.000Z",
+      "endDate": "2023-07-06T18:00:00.000Z",
+      "available": true,
+      "id": 7
     }
   ],
   "Exams": [
     {
-      "id": "1",
+      "id": 1,
       "examID": 1,
       "examName": "Monthly",
       "examFee": 1200,
       "examResults": []
     },
     {
-      "id": "2",
-      "examID": 2,
-      "examName": "Mid Monthly",
-      "examFee": 650,
-      "examResults": []
+      "examName": "asp.net",
+      "examFee": "500",
+      "examResults": [
+        {
+          "traineeID": 4,
+          "result": 2
+        },
+        {
+          "traineeID": 5,
+          "result": 2
+        }
+      ],
+      "id": 3
+    },
+    {
+      "examName": "eee 123",
+      "examFee": "800",
+      "examResults": [
+        {
+          "traineeID": 7,
+          "result": 1
+        },
+        {
+          "traineeID": 6,
+          "result": 2
+        }
+      ],
+      "id": 4
     }
   ],
   "trainees": [
     {
-      "id": "1",
+      "id": 1,
       "traineeID": 1,
       "traineeName": " Nur Sakib",
       "traineeAddress": "Mirpur-10",
@@ -259,7 +302,7 @@
       "examResults": []
     },
     {
-      "id": "2",
+      "id": 2,
       "traineeID": 2,
       "traineeName": " Maruf Billah",
       "traineeAddress": "Mirpur-1",
@@ -270,6 +313,48 @@
       "courseID": 2,
       "course": null,
       "examResults": []
+    },
+    {
+      "id": 3,
+      "traineeName": "rrt",
+      "traineeAddress": "romna",
+      "birthDate": "2023-07-04T18:00:00.000Z",
+      "email": "tr@gmail.com",
+      "courseID": 1
+    },
+    {
+      "id": 4,
+      "traineeName": "ttt",
+      "traineeAddress": "ddd",
+      "birthDate": "2023-07-04T18:00:00.000Z",
+      "email": "te@gmail.com",
+      "courseID": 4
+    },
+    {
+      "id": 5,
+      "traineeName": "mizan 45",
+      "traineeAddress": "dhaka",
+      "birthDate": "2023-07-18T18:00:00.000Z",
+      "email": "mizan@gmail.com",
+      "courseID": 4,
+      "courseName": "bang"
+    },
+    {
+      "id": 6,
+      "traineeName": "Harun",
+      "traineeAddress": "baridhara",
+      "birthDate": "2023-07-18T18:00:00.000Z",
+      "email": "harun@gmail.com",
+      "courseID": 4
+    },
+    {
+      "id": 7,
+      "traineeName": "mushfiquer rahman 123",
+      "traineeAddress": "mirpur 10",
+      "birthDate": "2023-07-05T18:00:00.000Z",
+      "email": "mushfiq@gmail.com",
+      "courseID": 7,
+      "courseName": "eee 123"
     }
   ]
 }
