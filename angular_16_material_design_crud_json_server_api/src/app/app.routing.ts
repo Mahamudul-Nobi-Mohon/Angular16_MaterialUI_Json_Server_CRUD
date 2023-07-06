@@ -25,6 +25,8 @@ import { TraineeEditComponent } from './trainee/trainee-edit/trainee-edit.compon
 import { TraineeViewComponent } from './trainee/trainee-view/trainee-view.component';
 import { ExamEditComponent } from './exam/exam-edit/exam-edit.component';
 
+import { CascadingDropdownComponent } from './components/cascading-dropdown/cascading-dropdown.component';
+
 export const AppRoutes: Routes = [
   {
     path: '',
@@ -50,6 +52,7 @@ export const AppRoutes: Routes = [
  {component:UserComponent,path:'user',canActivate:[AuthGuard]},
  {component:CustomerComponent,path:'customer',canActivate:[AuthGuard]},
  {component:ProductComponent,path:'product',canActivate:[AuthGuard]},
+ {component:CascadingDropdownComponent,path:'CascadingDropdown',canActivate:[AuthGuard]},
 
  {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},

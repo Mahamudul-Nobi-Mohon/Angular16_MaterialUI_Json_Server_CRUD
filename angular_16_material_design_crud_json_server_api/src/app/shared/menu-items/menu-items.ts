@@ -12,7 +12,8 @@ const MENUITEMS = [
   { state: 'user', name: 'User', type: 'link', icon: 'account_circle' },
   { state: 'courses', name: 'courses', type: 'link', icon: 'account_circle' },
   { state: 'trainees', name: 'trainees', type: 'link', icon: 'account_circle' },
-  { state: 'exams', name: 'exams', type: 'link', icon: 'account_circle' }
+  { state: 'exams', name: 'exams', type: 'link', icon: 'account_circle' },
+  { state: 'CascadingDropdown', name: 'CascadingDropdown', type: 'link', icon: 'account_circle' }
   // { state: 'product', name: 'Product', type: 'link', icon: 'fastfood' },
   // { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   // { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },

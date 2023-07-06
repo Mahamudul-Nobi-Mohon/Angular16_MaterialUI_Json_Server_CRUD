@@ -356,5 +356,72 @@
       "courseID": 7,
       "courseName": "eee 123"
     }
+  ],
+  "Country":[
+    {
+      "id": 1,
+      "name": "INDIA"
+
+    },
+    {
+      "id": 2,
+      "name": "AUSTRALIA"
+
+    },
+    {
+      "id": 3,
+      "name": "SRILANKA"
+
+    }
+  ],
+  "State":[
+    {
+      "id": 1,
+      "name": "Rajasthan",
+      "countryId": 1
+
+    },
+    {
+      "id": 2,
+      "name": "Delhi",
+      "countryId": 1
+
+    },
+    {
+      "id": 3,
+      "name": "Gujrat",
+      "countryId": 1
+
+    },
+    {
+      "id": 4,
+      "name": "UttarPradesh",
+      "countryId": 1
+
+    },
+    {
+      "id": 5,
+      "name": "New South Wales",
+      "countryId": 2
+
+    },
+    {
+      "id": 6,
+      "name": "Queensland",
+      "countryId": 2
+
+    },
+    {
+      "id": 7,
+      "name": "Western Province",
+      "countryId": 3
+
+    },
+    {
+      "id": 8,
+      "name": "Central Province",
+      "countryId": 3
+
+    }
   ]
 }

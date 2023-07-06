@@ -44,6 +44,7 @@ import { ConfirmDialogComponent } from './common/confirm-dialog/confirm-dialog.c
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
 //import {MaterialModule} from 'src/material.module';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
+import { CascadingDropdownComponent } from './components/cascading-dropdown/cascading-dropdown.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     TraineeEditComponent,
     ConfirmDialogComponent,
     NavBarComponent,
+    CascadingDropdownComponent,
     
   ],
   imports: [
